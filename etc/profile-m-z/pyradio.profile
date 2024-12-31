@@ -42,6 +42,18 @@ include disable-shell.inc
 include disable-X11.inc
 include disable-xdg.inc
 
+whitelist ${HOME}/.cache/mpv
+whitelist ${HOME}/.cache/vlc
+whitelist ${HOME}/.config/mpv
+whitelist ${HOME}/.config/vlc
+whitelist ${HOME}/.local/share/vlc
+whitelist ${HOME}/.local/state/mpv
+whitelist ${HOME}/.mplayer
+whitelist ${HOME}/.netrc
+whitelist /usr/share/lua*
+whitelist /usr/share/mpv
+whitelist /usr/share/vlc
+
 mkdir ${HOME}/.cache/pyradio
 mkdir ${HOME}/.config/pyradio
 mkdir ${HOME}/.local/share/pyradio
@@ -52,25 +64,6 @@ whitelist ${HOME}/.config/pyradio
 whitelist ${HOME}/.local/share/pyradio
 whitelist ${HOME}/.local/state/pyradio
 whitelist ${HOME}/pyradio-recordings
-# mpv
-mkdir ${HOME}/.config/mpv
-mkfile ${HOME}/.netrc
-whitelist ${HOME}/.config/mpv
-whitelist ${HOME}/.netrc
-whitelist /usr/share/lua
-whitelist /usr/share/lua*
-# mplayer
-mkdir ${HOME}/.mplayer
-whitelist ${HOME}/.mplayer
-# vlc
-mkdir ${HOME}/.cache/vlc
-mkdir ${HOME}/.config/vlc
-mkdir ${HOME}/.local/share/vlc
-whitelist ${HOME}/.cache/vlc
-whitelist ${HOME}/.config/vlc
-whitelist ${HOME}/.local/share/vlc
-whitelist ${HOME}/.config/aacs
-
 include whitelist-common.inc
 include whitelist-run-common.inc
 include whitelist-runuser-common.inc
