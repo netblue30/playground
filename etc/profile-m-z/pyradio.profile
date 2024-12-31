@@ -99,5 +99,4 @@ dbus-system none
 
 deterministic-shutdown
 #memory-deny-write-execute # crashes lua
-read-write ${HOME}
 restrict-namespaces
