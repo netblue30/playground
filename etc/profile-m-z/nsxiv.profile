@@ -9,6 +9,10 @@ include globals.local
 # Allow /bin/sh (blacklisted by disable-shell.inc)
 include allow-bin-sh.inc
 
+noblacklist ${HOME}/.cache/nsxiv
+noblacklist ${HOME}/.config/nsxiv
+
+include disable-common.inc
 include disable-devel.inc
 include disable-exec.inc
 include disable-interpreters.inc
