@@ -7,13 +7,20 @@ include pyradio.local
 # Persistent global definitions
 include globals.local
 
-noblacklist ${HOME}/.config/mpv
-noblacklist ${HOME}/.netrc
-noblacklist ${HOME}/.mplayer
+noblacklist ${HOME}/.cache/mpv
 noblacklist ${HOME}/.cache/vlc
+noblacklist ${HOME}/.config/mpv
 noblacklist ${HOME}/.config/vlc
-noblacklist ${HOME}/.config/aacs
 noblacklist ${HOME}/.local/share/vlc
+noblacklist ${HOME}/.local/state/mpv
+noblacklist ${HOME}/.mplayer
+noblacklist ${HOME}/.netrc
+
+noblacklist ${HOME}/.cache/pyradio
+noblacklist ${HOME}/.config/pyradio
+noblacklist ${HOME}/.local/share/pyradio
+noblacklist ${HOME}/.local/state/pyradio
+noblacklist ${HOME}/pyradio-recordings
 
 # This is required by mpv
 # Allow lua (blacklisted by disable-interpreters.inc)
